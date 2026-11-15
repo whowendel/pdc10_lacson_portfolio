@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prompt Odyssey</title>
+<meta name="author" content="Wendel Lacson">
+<meta name="description" content="Prompt Odyssey: Wendel Lacson's PDC10 final project portfolio, a compilation of AI conversations. Submitted to Dr. Adrianne Brent S. Castro.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="space" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="flash" id="flash" aria-hidden="true"></div>
+<div class="jump" id="jump" aria-hidden="true"><b>Jump gate</b> Entering sector <span id="jumpN">01</span> · <span id="jumpT"></span></div>
+
+<header class="hud">
+  <div class="hud__bar">
+    <a class="brand" href="#launch"><b>PDC10</b> // Prompt Odyssey</a>
+    <div class="hud__meter" aria-hidden="true"><i id="meter"></i></div>
+    <div class="hud__read wk" id="hudVel">VEL <span>0.00</span> c</div>
+    <div class="hud__read wk" id="hudWeek">LOG <span>—</span></div>
+    <div class="hud__read" id="hudSector">SECTOR <span>00</span> / 09</div>
+  </div>
+</header>
+<ul class="rail" id="rail" aria-label="Chapters"></ul>
+
+<main id="main">
+  <section class="scene scene--left" id="launch" data-hue="--cyan">
+    <div class="scene__inner">
+      <div class="panel">
+        <div class="eyebrow"><b>Mission log</b><i>PDC10</i><i>Final Project Portfolio</i></div>
+        <h1>Prompt <em>Odyssey</em></h1>
+        <p class="lede">A compilation of my AI conversations from PDC10, told as one voyage. Every prompt I wrote this semester is a waypoint, and every waypoint taught me something.</p>
+        <div class="pilot"><small>Pilot</small><b>Wendel Lacson</b><span>Submitted to Dr. Adrianne Brent S. Castro</span></div>
+        <a class="btn" href="#chapter-1">Begin the voyage <span aria-hidden="true">→</span></a>
+        <p class="hint">Scroll to fire the engine · steer the rocket with your cursor · click the floating artifact · tap a prompt card to flip it</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="chapters"></div>
+
+  <section class="scene scene--left" id="debrief" data-hue="--cyan">
+    <div class="scene__inner">
+      <div class="panel">
+        <div class="eyebrow"><b>Sector 09</b><i>Final destination</i></div>
+        <h2>Touchdown</h2>
+        <p class="status" id="landStatus"><i></i><span>Approaching final destination</span></p>
+        <p class="lede">This is the compilation of my AI conversations throughout the semester.</p>
+        <dl class="credits">
+          <div><dt>Pilot</dt><dd>Wendel Lacson</dd></div>
+          <div><dt>Mission</dt><dd>PDC10 · Final Project Portfolio</dd></div>
+          <div><dt>Submitted to</dt><dd>Dr. Adrianne Brent S. Castro</dd></div>
+        </dl>
+        <p>At the start, I asked AI to fix my writing without telling it what I wanted. By the end, I was writing the instructions myself: a role, the context, the format, the limits, and what to do when it isn't sure. PDC10 taught me that a good answer starts with a good prompt, and that I still have to check what comes back.</p>
+        <div class="stats">
+          <div class="stat"><b>3</b><span>PDC10 games cleared</span></div>
+          <div class="stat"><b>18</b><span>Levels, locks &amp; chambers</span></div>
+          <div class="stat"><b>3</b><span>Chatbots used</span></div>
+        </div>
+        <a class="btn" href="#launch">Replay the voyage <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>PROMPT ODYSSEY · WENDEL LACSON · PDC10 FINAL PROJECT PORTFOLIO</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot" hidden>
+  <button class="lightbox__close" id="lbClose" type="button">Close</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__ring" id="curRing"><i></i><span class="cursor__label" id="curLabel"></span></div>
+  <div class="cursor__dot" id="curDot"></div>
+</div>
+
+<script src="js/three.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
